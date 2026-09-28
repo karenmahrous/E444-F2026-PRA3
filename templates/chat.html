@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block page_content %}
+<div class="page-header">
+  <h1>Hello, {{ name }}! Welcome to PRA3 Docker!</h1>
+</div>
+
+<h3>Chatbot</h3>
+<div id="replies" style="min-height:150px; border:1px solid #ddd; padding:10px; margin-bottom:10px;"></div>
+
+<div class="form-inline">
+  <input type="text" id="msg" class="form-control" style="width:60%" placeholder="Type a message">
+  <button id="send" class="btn btn-primary">Send</button>
+  <a href="{{ url_for('logout') }}" class="btn btn-default">Logout</a>
+</div>
+
+<script>
+const box = document.getElementById('msg');
+const replies = document.getElementById('replies');
+
+function addLine(who, text) {
+  const p = document.createElement('p');
+  const b = document.createElement('b');
+  b.textContent = who + ': ';
+  p.appendChild(b);
+  p.appendChild(document.createTextNode(text));
+  replies.appendChild(p);
+}
+
+async function send() {
+  const text = box.value.trim();
+  if (!text) return;
+  addLine('You', text);
+  box.value = '';
+  const r = await fetch('/chat', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({message: text})
+  });
+  const data = await r.json();
+  addLine('Bot', data.reply);
+}
+
+document.getElementById('send').addEventListener('click', send);
+box.addEventListener('keydown', e => { if (e.key === 'Enter') send(); });
+</script>
+{% endblock %}
