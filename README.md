@@ -14,3 +14,7 @@ This repo is a clone of https://github.com/miguelgrinberg/flasky.
 
 Non-UofT email:
 ![Non-UofT email](page-1-4-nonuoft.png)
+
+## Activity 2.2: Docker installed
+
+![docker version](docker-version.png)
