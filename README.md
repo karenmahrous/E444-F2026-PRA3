@@ -12,11 +12,5 @@ This repo is a clone of https://github.com/miguelgrinberg/flasky.
 
 ## Activity 1.4
 
-UofT email:
-![UofT email](page-1-4-uoft.png)
-
-Invalid email:
-![Invalid email](page-1-4-invalid.png)
-
 Non-UofT email:
 ![Non-UofT email](page-1-4-nonuoft.png)
