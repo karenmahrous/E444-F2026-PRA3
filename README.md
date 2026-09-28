@@ -18,3 +18,7 @@ Non-UofT email:
 ## Activity 2.2: Docker installed
 
 ![docker version](docker-version.png)
+
+## Activity 2.4: Docker container running
+
+![docker ps -a](docker-ps.png)
