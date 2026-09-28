@@ -22,3 +22,11 @@ Non-UofT email:
 ## Activity 2.4: Docker container running
 
 ![docker ps -a](docker-ps.png)
+
+## Activity 2.5: Chatbot with memory
+
+Memory before logout:
+![Chat memory](chat-memory.png)
+
+After logout and login:
+![After logout](chat-logout.png)
