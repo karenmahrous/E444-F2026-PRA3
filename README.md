@@ -9,3 +9,14 @@ This repo is a clone of https://github.com/miguelgrinberg/flasky.
 ![hello.py changes](screenshot-1-3-hello.png)
 ![Templates](screenshot-1-3-templates.png)
 ![Running page](page-1-3.png)
+
+## Activity 1.4
+
+UofT email:
+![UofT email](page-1-4-uoft.png)
+
+Invalid email:
+![Invalid email](page-1-4-invalid.png)
+
+Non-UofT email:
+![Non-UofT email](page-1-4-nonuoft.png)
